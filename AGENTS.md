@@ -39,3 +39,7 @@ Docs: https://docs.expo.dev/eas/index.md
 - If `ios/` and `android/` directories do not exist, they are generated (Continuous Native Generation). Never create or edit them by hand — configure native behavior in `app.json` and config plugins.
 - Expo Go only includes its bundled native modules. After adding a library with native code, the app needs a development build: `npx expo run:ios|android` locally, or `eas build --profile development`.
 - Prefer recommended Expo modules over third-party libraries, and check your available skills before adding dependencies. Docs: https://docs.expo.dev/versions/latest/index.md
+## Restricciones de Seguridad de la IA (Obligatorias para el Proyecto)
+1. **Cero Secretos:** La IA tiene prohibido leer, buscar, escribir o referenciar archivos de entorno (`.env`, `.env.local`), credenciales, keystores o claves privadas.
+2. **Límites de Directorio:** La IA tiene estrictamente prohibido salir de la carpeta raíz de este repositorio (`11-domicilios-app`) o ejecutar comandos de navegación hacia directorios superiores.
+3. **Acciones Externas:** Cualquier acción que afecte sistemas externos (como despliegues o cambios en servicios en la nube) requiere autorización explícita.
